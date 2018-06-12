@@ -1,5 +1,11 @@
 FROM sentry:8.22
 
+RUN apt-get update && apt-get install -y --no-install-recommends \
+        libxmlsec1-dev \
+        git \
+        pkg-config \
+    && rm -rf /var/lib/apt/lists/*
+
 WORKDIR /usr/src/sentry
 
 # Add WORKDIR to PYTHONPATH so local python files don't need to be installed
