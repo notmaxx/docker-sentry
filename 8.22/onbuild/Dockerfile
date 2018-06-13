@@ -1,4 +1,4 @@
-FROM sentry:8.22
+FROM quay.io/workato/sentry:8.22
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
         libxmlsec1-dev \
